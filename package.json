@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpsullivan/SlickGrid.git"
+    "url": "git+https://github.com/jpsullivan/SlickGrid.git"
   },
   "keywords": [
     "slickgrid",
@@ -17,5 +17,11 @@
   ],
   "author": "Michael Leibman <michael.leibman@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "bugs": {
+    "url": "https://github.com/jpsullivan/SlickGrid/issues"
+  },
+  "homepage": "https://github.com/jpsullivan/SlickGrid#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

@@ -20,11 +20,15 @@
 if (typeof jQuery === "undefined") {
   throw "SlickGrid requires jquery module to be loaded";
 }
+
+// jquery loves to touch the globals
+require('./lib/jquery.event.drag-2.2');
+
+// for sorting
+require('./lib/jquery-ui-1.11.3');
+
 if (!jQuery.fn.drag) {
   throw "SlickGrid requires jquery.event.drag module to be loaded";
-}
-if (typeof Slick === "undefined") {
-  throw "slick.core.js not loaded";
 }
 
 var Slick = require('./slick.core');
