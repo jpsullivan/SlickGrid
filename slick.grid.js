@@ -27,8 +27,12 @@ if (typeof Slick === "undefined") {
   throw "slick.core.js not loaded";
 }
 
+var Slick = require('./slick.core');
 
 (function ($) {
+
+  module.exports = SlickGrid;
+
   // Slick.Grid
   $.extend(true, window, {
     Slick: {
@@ -940,7 +944,7 @@ if (typeof Slick === "undefined") {
 	  // so for equivalent functionality, prior to 1.8 use .width, and after use .outerWidth
 	  var verArray = $.fn.jquery.split('.');
 	  jQueryNewWidthBehaviour = (verArray[0]==1 && verArray[1]>=8) ||  verArray[0] >=2;
-	  
+
       el = $("<div class='ui-state-default slick-header-column' style='visibility:hidden'>-</div>").appendTo($headers);
       headerColumnWidthDiff = headerColumnHeightDiff = 0;
       if (el.css("box-sizing") != "border-box" && el.css("-moz-box-sizing") != "border-box" && el.css("-webkit-box-sizing") != "border-box") {
@@ -2325,7 +2329,7 @@ if (typeof Slick === "undefined") {
 
           if (options.enableAsyncPostRenderCleanup) { startPostProcessingCleanup(); }
         }
-        rowNodeFromLastMouseWheelEvent = rowNode;      
+        rowNodeFromLastMouseWheelEvent = rowNode;
       }
     }
 
@@ -2381,7 +2385,7 @@ if (typeof Slick === "undefined") {
             cancelEditAndSetFocus();
           } else if (e.which == keyCode.PAGEDOWN) {
             navigatePageDown();
-            handled = true;           
+            handled = true;
           } else if (e.which == keyCode.PAGEUP) {
             navigatePageUp();
             handled = true;
@@ -2771,12 +2775,12 @@ if (typeof Slick === "undefined") {
       $(activeCellNode).addClass("editable");
 
 	  var useEditor = editor || getEditor(activeRow, activeCell);
-	  
+
       // don't clear the cell if a custom editor is passed through
       if (!editor && !useEditor.suppressClearOnEdit) {
         activeCellNode.innerHTML = "";
       }
- 
+
       currentEditor = new useEditor({
         grid: self,
         gridPosition: absBox($container[0]),
@@ -2832,7 +2836,7 @@ if (typeof Slick === "undefined") {
       var offsetParent = elem.offsetParent;
       while ((elem = elem.parentNode) != document.body) {
 		if (elem == null) break;
-		
+
         if (box.visible && elem.scrollHeight != elem.offsetHeight && $(elem).css("overflowY") != "visible") {
           box.visible = box.bottom > elem.scrollTop && box.top < elem.scrollTop + elem.clientHeight;
         }
@@ -2944,7 +2948,7 @@ if (typeof Slick === "undefined") {
         var prevActivePosX = activePosX;
         while (cell <= activePosX) {
           if (canCellBeActive(row, cell)) {
-            prevCell = cell;  
+            prevCell = cell;
           }
           cell += getColspan(row, cell);
         }
