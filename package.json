@@ -1,6 +1,6 @@
 {
   "name": "slickgrid-6pac",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "A lightning fast JavaScript grid/spreadsheet, latest fork from 6pac's repo",
   "main": "slick.core.js",
   "directories": {
