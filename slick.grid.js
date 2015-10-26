@@ -25,7 +25,7 @@ if (typeof jQuery === "undefined") {
 require('./lib/jquery.event.drag-2.2');
 
 // for sorting
-require('./lib/jquery-ui-1.11.3');
+require('./lib/jquery-ui-1.11.4');
 
 if (!jQuery.fn.drag) {
   throw "SlickGrid requires jquery.event.drag module to be loaded";
