@@ -184,6 +184,18 @@ module.exports = {
       updateIdxById();
       refresh();
     }
+    
+    function altSort(field, ascending) {
+      sortAsc = ascending;
+      var sortedItems = _.sortBy(items, field);
+      if (ascending === false) {
+        sortedItems.reverse();
+      }
+      items = sortedItems;
+      idxById = {};
+      updateIdxById();
+      refresh();
+    }
 
     /***
      * Provides a workaround for the extremely slow sorting in IE.
@@ -1009,6 +1021,7 @@ module.exports = {
       "setItems": setItems,
       "setFilter": setFilter,
       "sort": sort,
+      "altSort": altSort,
       "fastSort": fastSort,
       "reSort": reSort,
       "setGrouping": setGrouping,
