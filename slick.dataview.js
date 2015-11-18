@@ -187,7 +187,9 @@ module.exports = {
     
     function altSort(field, ascending) {
       sortAsc = ascending;
-      var sortedItems = _.sortBy(items, field);
+      var sortedItems = _.sortBy(items, function (o) {
+        return o[field];
+      });
       if (ascending === false) {
         sortedItems.reverse();
       }
