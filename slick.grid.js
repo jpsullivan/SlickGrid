@@ -70,6 +70,7 @@ var Slick = require('./slick.core');
       leaveSpaceForNewRows: false,
       editable: false,
       autoEdit: true,
+      preventNavigateDown: false,
       enableCellNavigation: true,
       enableColumnReorder: true,
       asyncEditorLoading: false,
@@ -2812,7 +2813,7 @@ var Slick = require('./slick.core');
       // if so, do not steal the focus from the editor
       if (getEditorLock().commitCurrentEdit()) {
         setFocus();
-        if (options.autoEdit) {
+        if (options.autoEdit && !options.preventNavigateDown) {
           navigateDown();
         }
       }
