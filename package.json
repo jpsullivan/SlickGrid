@@ -1,6 +1,6 @@
 {
   "name": "slickgrid-6pac",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "description": "A lightning fast JavaScript grid/spreadsheet, latest fork from 6pac's repo",
   "main": "slick.core.js",
   "directories": {
@@ -23,5 +23,9 @@
   "homepage": "https://github.com/jpsullivan/SlickGrid#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jquery": "^1.11.2",
+    "jquery-ui": "^1.10.5"
   }
 }
